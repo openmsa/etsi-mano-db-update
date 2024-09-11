@@ -1,0 +1,148 @@
+databaseChangeLog:
+- changeSet:
+    id: 1726071068217-12
+    author: olivier (generated)
+    changes:
+    - dropForeignKeyConstraint:
+        baseTableName: local_affinity_or_anti_affinity_rule
+        constraintName: fkr5pxkjgaro0uskky4vhrasc1r
+- changeSet:
+    id: 1726071068217-2
+    author: olivier (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: juju_metadata_id
+            type: UUID
+        - column:
+            name: constraints
+            type: VARCHAR(255)
+        tableName: juju_metadata_constraints
+- changeSet:
+    id: 1726071068217-3
+    author: olivier (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: detail
+            type: varchar(500 BYTE)
+        tableName: capi_server
+- changeSet:
+    id: 1726071068217-4
+    author: olivier (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: instance
+            type: varchar(255 BYTE)
+        tableName: capi_server
+- changeSet:
+    id: 1726071068217-5
+    author: olivier (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: status
+            type: int8
+        tableName: capi_server
+- changeSet:
+    id: 1726071068217-6
+    author: olivier (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: title
+            type: varchar(255 BYTE)
+        tableName: capi_server
+- changeSet:
+    id: 1726071068217-7
+    author: olivier (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: type
+            type: varchar(255 BYTE)
+        tableName: capi_server
+- changeSet:
+    id: 1726071068217-8
+    author: olivier (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: server_status
+            type: int2(5)
+        tableName: capi_server
+- changeSet:
+    id: 1726071068217-9
+    author: olivier (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: version
+            type: int8
+        tableName: capi_server
+- changeSet:
+    id: 1726071068217-10
+    author: olivier (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: juju_metadata_id
+        baseTableName: juju_metadata_constraints
+        constraintName: fk3t5vgd8g5flu0qj3maub6lsl3
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: juju_metadata
+        validate: true
+- changeSet:
+    id: 1726071068217-11
+    author: olivier (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: local_affinity_or_anti_affinity_rule_id
+        baseTableName: local_affinity_or_anti_affinity_rule
+        constraintName: fkh7jwuq9ifymhttrvqocv4ej6c
+        deferrable: false
+        initiallyDeferred: false
+        onDelete: NO ACTION
+        onUpdate: NO ACTION
+        referencedColumnNames: id
+        referencedTableName: os_container_deployable_unit
+        validate: true
+- changeSet:
+    id: 1726071068217-13
+    author: olivier (generated)
+    changes:
+    - dropColumn:
+        columnName: classifier
+        tableName: ns_task
+- changeSet:
+    id: 1726071068217-14
+    author: olivier (generated)
+    changes:
+    - dropColumn:
+        columnName: constraints
+        tableName: juju_metadata
+- changeSet:
+    id: 1726071068217-1
+    author: olivier (generated)
+    changes:
+    - modifyDataType:
+        columnName: artifact_classification
+        newDataType: varchar(255)
+        tableName: additional_artifact
+

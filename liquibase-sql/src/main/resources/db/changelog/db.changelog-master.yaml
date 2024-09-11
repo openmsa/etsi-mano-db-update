@@ -23,3 +23,15 @@ databaseChangeLog:
       changes:
         - tagDatabase:
             tag: "4.0.0"
+
+  - include:
+      id: "4.0.0-to-4.1.0"
+      author: olivier
+      file: db/changelog/changes/db-0003-4.1.0.yaml
+
+  - changeSet:
+      id: 4.1.0-tag
+      author: olivier
+      changes:
+        - tagDatabase:
+            tag: "4.1.0"
