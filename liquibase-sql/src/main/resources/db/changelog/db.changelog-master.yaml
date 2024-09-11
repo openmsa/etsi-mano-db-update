@@ -1,0 +1,25 @@
+---
+databaseChangeLog:
+  - include:
+      id: "3.2.2-baseline"
+      author: olivier
+      file: db/changelog/changes/db-0001-mano-vnfm-initial.yaml
+
+  - changeSet:
+      id: 3.2.2-tag
+      author: olivier
+      changes:
+        - tagDatabase:
+            tag: "3.2.2"
+
+  - include:
+      id: "3.2.2-to-4.0.0"
+      author: olivier
+      file: db/changelog/changes/db-0002-4.0.0.yaml
+
+  - changeSet:
+      id: 4.0.0-tag
+      author: olivier
+      changes:
+        - tagDatabase:
+            tag: "4.0.0"

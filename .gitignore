@@ -1,0 +1,12 @@
+*.swp
+
+.project
+.settings/
+.classpath
+.factorypath
+.vscode/
+.idea/
+
+.cache/
+
+target/

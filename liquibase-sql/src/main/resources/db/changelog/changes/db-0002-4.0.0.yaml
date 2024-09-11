@@ -1,0 +1,3935 @@
+---
+databaseChangeLog:
+  - changeSet:
+      id: 1725554130753-252
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: mon_conn_information_access_info
+            constraintName: fk10368p5kw94is1j2n88y2mtch
+  - changeSet:
+      id: 1725554130753-253
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: ip_over_ethernet_address_info_entity_ip_addresses
+            constraintName: fk1e6fkhvxpxf6fr8o811lksn2v
+  - changeSet:
+      id: 1725554130753-254
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: vim_connection_information_access_info
+            constraintName: fk22en7hrpd97dwqxolivksjpgh
+  - changeSet:
+      id: 1725554130753-255
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: ip_over_ethernet_address_data_ip_addresses_entity_addresses
+            constraintName: fk62o43btrmlnnpayre2pj6y1ll
+  - changeSet:
+      id: 1725554130753-256
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: vim_connection_information_interface_info
+            constraintName: fk8b3e2w9advo9df917gve8rbym
+  - changeSet:
+      id: 1725554130753-257
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: instance_mciop_repository_info
+            constraintName: fkare1m83i4jngtmkydadm8rg1p
+  - changeSet:
+      id: 1725554130753-258
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: system_connections_access_info
+            constraintName: fkbmjt2ylmtedfet7p0d2vif0rv
+  - changeSet:
+      id: 1725554130753-259
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: mon_conn_information_interface_info
+            constraintName: fkircfl9r54fnvigaa20v2u5ov4
+  - changeSet:
+      id: 1725554130753-260
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: instance_cir_connection_info
+            constraintName: fkklyhoabocu8mh0eud2i5fcxs8
+  - changeSet:
+      id: 1725554130753-261
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: system_connections_interface_info
+            constraintName: fkne4hr29biae6prwo980g5wfp9
+  - changeSet:
+      id: 1725554130753-262
+      author: olivier (generated)
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: ip_over_ethernet_address_data_entity_ip_addresses
+            constraintName: fko8n0srcxdyny90oxmimcgb6cu
+  - changeSet:
+      id: 1725554130753-13
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: etsik8s_interface_info_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: connection_timeout
+                  type: INTEGER
+              - column:
+                  name: endpoint
+                  type: VARCHAR(255)
+              - column:
+                  name: iface
+                  type: VARCHAR(255)
+              - column:
+                  name: nat_host
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: non_strict_ssl
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  name: read_timeout
+                  type: INTEGER
+              - column:
+                  name: region_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: retry
+                  type: INTEGER
+              - column:
+                  name: sdn_endpoint
+                  type: VARCHAR(255)
+              - column:
+                  name: auth_type
+                  type: SMALLINT
+              - column:
+                  name: server_certificate
+                  type: VARCHAR(5000)
+              - column:
+                  name: skip_certificate_verification
+                  type: VARCHAR(5000)
+            tableName: etsik8s_interface_info
+  - changeSet:
+      id: 1725554130753-14
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: external_artifacts_access_config_artifact_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: artifact_uri
+                  type: VARCHAR(255)
+              - column:
+                  name: auth_type
+                  type: SMALLINT
+              - column:
+                  name: override_uri
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+              - column:
+                  name: client_id
+                  type: VARCHAR(255)
+              - column:
+                  name: client_password
+                  type: VARCHAR(255)
+              - column:
+                  name: token_endpoint
+                  type: VARCHAR(255)
+            tableName: external_artifacts_access_config_artifact
+  - changeSet:
+      id: 1725554130753-15
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: ip_over_eth_addr_ip_addr_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: max_address
+                  type: VARCHAR(255)
+              - column:
+                  name: min_address
+                  type: VARCHAR(255)
+              - column:
+                  name: num_dynamic_addresses
+                  type: INTEGER
+              - column:
+                  name: subnet_id
+                  type: VARCHAR(255)
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+            tableName: ip_over_eth_addr_ip_addr
+  - changeSet:
+      id: 1725554130753-16
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: k8s_tls_connection_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: access_info_id
+                  type: UUID
+              - column:
+                  name: interface_info_id
+                  type: UUID
+            tableName: k8s_tls_connection
+  - changeSet:
+      id: 1725554130753-17
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: openstack_keystonev3connection_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: access_info_id
+                  type: UUID
+              - column:
+                  name: interface_info_id
+                  type: UUID
+            tableName: openstack_keystonev3connection
+  - changeSet:
+      id: 1725554130753-18
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: vnf_info_modifications_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: vnfc_info_modifications_id
+                  type: UUID
+            tableName: vnf_info_modifications_vnfc_info_modifications
+  - changeSet:
+      id: 1725554130753-19
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_response_paas_assets_pkey
+                  name: grant_response_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_response_paas_assets_pkey
+                  name: paas_assets_id
+                  type: UUID
+            tableName: grant_response_paas_assets
+  - changeSet:
+      id: 1725554130753-20
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_package_repositories_pkey
+                  name: vnf_package_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_package_repositories_pkey
+                  name: repositories_id
+                  type: UUID
+            tableName: vnf_package_repositories
+  - changeSet:
+      id: 1725554130753-21
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: paas_asset_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: paas_service_id
+                  type: VARCHAR(255)
+              - column:
+                  name: paas_service_request_id
+                  type: VARCHAR(255)
+              - column:
+                  name: paas_service_type
+                  type: VARCHAR(255)
+              - column:
+                  name: paas_service_version
+                  type: VARCHAR(255)
+              - column:
+                  name: paas_service_handle_id
+                  type: UUID
+            tableName: paas_asset
+  - changeSet:
+      id: 1725554130753-22
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: vnf_package_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: artifact_id
+                  type: UUID
+            tableName: vnf_package_artifact
+  - changeSet:
+      id: 1725554130753-23
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pnf_descriptor_artifacts_pkey
+                  name: pnf_descriptor_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pnf_descriptor_artifacts_pkey
+                  name: artifacts_id
+                  type: UUID
+            tableName: pnf_descriptor_artifacts
+  - changeSet:
+      id: 1725554130753-24
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_response_storage_assets_pkey
+                  name: grant_response_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_response_storage_assets_pkey
+                  name: storage_assets_id
+                  type: UUID
+            tableName: grant_response_storage_assets
+  - changeSet:
+      id: 1725554130753-25
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: sub_network_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: pools_id
+                  type: UUID
+            tableName: sub_network_pools
+  - changeSet:
+      id: 1725554130753-56
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: access_info_pkey
+                  name: id
+                  type: UUID
+            tableName: access_info
+  - changeSet:
+      id: 1725554130753-57
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: basic_access_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+            tableName: basic_access
+  - changeSet:
+      id: 1725554130753-58
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: capi_server_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: certificate_authority_data
+                  type: VARCHAR(5000)
+              - column:
+                  name: client_certificate_data
+                  type: VARCHAR(5000)
+              - column:
+                  name: client_key_data
+                  type: VARCHAR(5000)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: url
+                  type: VARCHAR(255)
+            tableName: capi_server
+  - changeSet:
+      id: 1725554130753-59
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: cluster_machine_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: flavor
+                  type: VARCHAR(255)
+              - column:
+                  name: flavor_id
+                  type: VARCHAR(255)
+              - column:
+                  name: image
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: min_number_instance
+                  type: INTEGER
+            tableName: cluster_machine
+  - changeSet:
+      id: 1725554130753-60
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: cluster_option_version_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: module
+                  type: VARCHAR(255)
+              - column:
+                  name: version
+                  type: VARCHAR(255)
+            tableName: cluster_option_version
+  - changeSet:
+      id: 1725554130753-61
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: etsi_kubernetesv1auth_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: client_certificate
+                  type: VARCHAR(255)
+              - column:
+                  name: client_certificate_key
+                  type: VARCHAR(255)
+              - column:
+                  name: client_id
+                  type: VARCHAR(255)
+              - column:
+                  name: client_secret
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: remote_server_certificate
+                  type: VARCHAR(255)
+              - column:
+                  name: skip_certificate_verification
+                  type: BOOLEAN
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+              - column:
+                  name: token
+                  type: VARCHAR(255)
+            tableName: etsi_kubernetesv1auth
+  - changeSet:
+      id: 1725554130753-62
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_information_ext_mcio_constraints_pkey
+                  name: grant_information_ext_id
+                  type: UUID
+              - column:
+                  name: mcio_constraints
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_information_ext_mcio_constraints_pkey
+                  name: mcio_constraints_key
+                  type: VARCHAR(255)
+            tableName: grant_information_ext_mcio_constraints
+  - changeSet:
+      id: 1725554130753-63
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: grant_information_ext_id
+                  type: UUID
+              - column:
+                  name: resource_template_id
+                  type: VARCHAR(255)
+            tableName: grant_information_ext_resource_template_id
+  - changeSet:
+      id: 1725554130753-64
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_response_cism_connections_pkey
+                  name: grant_response_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: grant_response_cism_connections_pkey
+                  name: cism_connections_id
+                  type: UUID
+            tableName: grant_response_cism_connections
+  - changeSet:
+      id: 1725554130753-65
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: instance_cism_connection_info_pkey
+                  name: instance_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: instance_cism_connection_info_pkey
+                  name: cism_connection_info_id
+                  type: UUID
+            tableName: instance_cism_connection_info
+  - changeSet:
+      id: 1725554130753-66
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: interface_info_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: connection_timeout
+                  type: INTEGER
+              - column:
+                  name: endpoint
+                  type: VARCHAR(255)
+              - column:
+                  name: iface
+                  type: VARCHAR(255)
+              - column:
+                  name: nat_host
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: non_strict_ssl
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  name: read_timeout
+                  type: INTEGER
+              - column:
+                  name: region_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: retry
+                  type: INTEGER
+              - column:
+                  name: sdn_endpoint
+                  type: VARCHAR(255)
+            tableName: interface_info
+  - changeSet:
+      id: 1725554130753-67
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: ip_over_eth_addr_ip_addr_id
+                  type: UUID
+              - column:
+                  name: addresses
+                  type: VARCHAR(255)
+            tableName: ip_over_eth_addr_ip_addr_addresses
+  - changeSet:
+      id: 1725554130753-68
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: ip_over_eth_addr_ip_addr_id
+                  type: UUID
+              - column:
+                  name: fixed_addresses
+                  type: VARCHAR(255)
+            tableName: ip_over_eth_addr_ip_addr_fixed_addresses
+  - changeSet:
+      id: 1725554130753-69
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: juju_clouds_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: auth_types
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: status
+                  type: VARCHAR(255)
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+              - column:
+                  name: credentail_id
+                  type: UUID
+              - column:
+                  name: metadata_id
+                  type: UUID
+            tableName: juju_clouds
+  - changeSet:
+      id: 1725554130753-70
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: juju_credentials_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: auth_type
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: tenant_name
+                  type: VARCHAR(255)
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+            tableName: juju_credentials
+  - changeSet:
+      id: 1725554130753-71
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: juju_metadata_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: constraints
+                  type: VARCHAR[]
+              - column:
+                  name: image_id
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: network_id
+                  type: VARCHAR(255)
+              - column:
+                  name: os_auth_url
+                  type: VARCHAR(255)
+              - column:
+                  name: os_series
+                  type: VARCHAR(255)
+              - column:
+                  name: path
+                  type: VARCHAR(255)
+              - column:
+                  name: region_name
+                  type: VARCHAR(255)
+            tableName: juju_metadata
+  - changeSet:
+      id: 1725554130753-72
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: juju_models_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: app_name
+                  type: VARCHAR(255)
+              - column:
+                  name: charm_name
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: models_id
+                  type: UUID
+            tableName: juju_models
+  - changeSet:
+      id: 1725554130753-73
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: juju_regions_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: end_point
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: region_id
+                  type: UUID
+            tableName: juju_regions
+  - changeSet:
+      id: 1725554130753-74
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: k8s_interface_info_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: connection_timeout
+                  type: INTEGER
+              - column:
+                  name: endpoint
+                  type: VARCHAR(255)
+              - column:
+                  name: iface
+                  type: VARCHAR(255)
+              - column:
+                  name: nat_host
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: non_strict_ssl
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  name: read_timeout
+                  type: INTEGER
+              - column:
+                  name: region_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: retry
+                  type: INTEGER
+              - column:
+                  name: sdn_endpoint
+                  type: VARCHAR(255)
+              - column:
+                  name: certificate_authority_data
+                  type: VARCHAR(5000)
+            tableName: k8s_interface_info
+  - changeSet:
+      id: 1725554130753-75
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: k8s_tls_connection_extra_pkey
+                  name: k8s_tls_connection_id
+                  type: UUID
+              - column:
+                  name: extra
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: k8s_tls_connection_extra_pkey
+                  name: extra_key
+                  type: VARCHAR(255)
+            tableName: k8s_tls_connection_extra
+  - changeSet:
+      id: 1725554130753-76
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: keystone_authv2_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: pasword
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: region
+                  type: VARCHAR(255)
+              - column:
+                  name: tenant
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: username
+                  type: VARCHAR(255)
+            tableName: keystone_authv2
+  - changeSet:
+      id: 1725554130753-77
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: keystone_authv3_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: project
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: project_domain
+                  type: VARCHAR(255)
+              - column:
+                  name: project_id
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: region
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: user_domain
+                  type: VARCHAR(255)
+            tableName: keystone_authv3
+  - changeSet:
+      id: 1725554130753-78
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: kubernetesv1auth_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: client_certificate_data
+                  type: VARCHAR(5000)
+              - column:
+                  name: client_key_data
+                  type: VARCHAR(5000)
+            tableName: kubernetesv1auth
+  - changeSet:
+      id: 1725554130753-79
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: ns_blueprint_additional_params_pkey
+                  name: ns_blueprint_id
+                  type: UUID
+              - column:
+                  name: additional_params
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: ns_blueprint_additional_params_pkey
+                  name: additional_params_key
+                  type: VARCHAR(255)
+            tableName: ns_blueprint_additional_params
+  - changeSet:
+      id: 1725554130753-80
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: ns_blueprint_cir_connections_pkey
+                  name: ns_blueprint_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: ns_blueprint_cir_connections_pkey
+                  name: cir_connections_id
+                  type: UUID
+            tableName: ns_blueprint_cir_connections
+  - changeSet:
+      id: 1725554130753-81
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: ns_blueprint_cism_connections_pkey
+                  name: ns_blueprint_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: ns_blueprint_cism_connections_pkey
+                  name: cism_connections_id
+                  type: UUID
+            tableName: ns_blueprint_cism_connections
+  - changeSet:
+      id: 1725554130753-82
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: oauth2access_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: access_token_url
+                  type: VARCHAR(255)
+              - column:
+                  name: client_id
+                  type: VARCHAR(255)
+              - column:
+                  name: grant_type
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+            tableName: oauth2access
+  - changeSet:
+      id: 1725554130753-83
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: oauth2access_id
+                  type: UUID
+              - column:
+                  name: scopes
+                  type: VARCHAR(255)
+            tableName: oauth2access_scopes
+  - changeSet:
+      id: 1725554130753-84
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: openstack_keystonev3connection_extra_pkey
+                  name: openstack_keystonev3connection_id
+                  type: UUID
+              - column:
+                  name: extra
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: openstack_keystonev3connection_extra_pkey
+                  name: extra_key
+                  type: VARCHAR(255)
+            tableName: openstack_keystonev3connection_extra
+  - changeSet:
+      id: 1725554130753-85
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: openstackv3interface_info_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: connection_timeout
+                  type: INTEGER
+              - column:
+                  name: endpoint
+                  type: VARCHAR(255)
+              - column:
+                  name: iface
+                  type: VARCHAR(255)
+              - column:
+                  name: nat_host
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: non_strict_ssl
+                  type: BOOLEAN
+              - column:
+                  constraints:
+                    nullable: false
+                  name: read_timeout
+                  type: INTEGER
+              - column:
+                  name: region_name
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: retry
+                  type: INTEGER
+              - column:
+                  name: sdn_endpoint
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: skip_certificate_hostname_check
+                  type: BOOLEAN
+              - column:
+                  name: skip_certificate_verification
+                  type: VARCHAR(255)
+            tableName: openstackv3interface_info
+  - changeSet:
+      id: 1725554130753-86
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: openstackv3interface_info_id
+                  type: UUID
+              - column:
+                  name: trusted_certificates
+                  type: VARCHAR(255)
+            tableName: openstackv3interface_info_trusted_certificates
+  - changeSet:
+      id: 1725554130753-87
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pnf_descriptor_user_defined_data_pkey
+                  name: pnf_descriptor_id
+                  type: UUID
+              - column:
+                  name: user_defined_data
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pnf_descriptor_user_defined_data_pkey
+                  name: user_defined_data_key
+                  type: VARCHAR(255)
+            tableName: pnf_descriptor_user_defined_data
+  - changeSet:
+      id: 1725554130753-88
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: dtype
+                  type: VARCHAR(31)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: repository_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: url
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+              - column:
+                  name: auth_bearer_token
+                  type: VARCHAR(255)
+              - column:
+                  name: certificate_auth_data
+                  type: VARCHAR(255)
+              - column:
+                  name: domain
+                  type: VARCHAR(255)
+              - column:
+                  name: region
+                  type: VARCHAR(255)
+              - column:
+                  name: tenant
+                  type: VARCHAR(255)
+              - column:
+                  name: private_key
+                  type: VARCHAR(255)
+              - column:
+                  name: protocol
+                  type: VARCHAR(255)
+              - column:
+                  name: token
+                  type: VARCHAR(255)
+              - column:
+                  name: token_type
+                  type: VARCHAR(255)
+            tableName: repository
+  - changeSet:
+      id: 1725554130753-89
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: snmpv3auth_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: authentication_passphrase
+                  type: VARCHAR(255)
+              - column:
+                  name: authentication_protocol
+                  type: VARCHAR(255)
+              - column:
+                  name: privacy_passphrase
+                  type: VARCHAR(255)
+              - column:
+                  name: privacy_protocol
+                  type: VARCHAR(255)
+              - column:
+                  name: security_name
+                  type: VARCHAR(255)
+            tableName: snmpv3auth
+  - changeSet:
+      id: 1725554130753-90
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: software_image_user_metadata_pkey
+                  name: software_image_id
+                  type: UUID
+              - column:
+                  name: user_metadata
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: software_image_user_metadata_pkey
+                  name: user_metadata_key
+                  type: VARCHAR(255)
+            tableName: software_image_user_metadata
+  - changeSet:
+      id: 1725554130753-91
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: storage_asset_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: resource_provider_id
+                  type: VARCHAR(255)
+              - column:
+                  name: storage_class_name
+                  type: VARCHAR(255)
+              - column:
+                  name: vim_connection_id
+                  type: VARCHAR(255)
+              - column:
+                  name: virtual_storage_desc_id
+                  type: VARCHAR(255)
+            tableName: storage_asset
+  - changeSet:
+      id: 1725554130753-92
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: sub_network_pkey
+                  name: id
+                  type: UUID
+              - column:
+                  name: cidr
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: enabledhcp
+                  type: BOOLEAN
+              - column:
+                  name: gateway
+                  type: VARCHAR(255)
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: network_id
+                  type: VARCHAR(255)
+              - column:
+                  name: resource_id
+                  type: VARCHAR(255)
+              - column:
+                  name: tenant_id
+                  type: VARCHAR(255)
+            tableName: sub_network
+  - changeSet:
+      id: 1725554130753-93
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: sub_network_id
+                  type: UUID
+              - column:
+                  name: dns_names
+                  type: VARCHAR(255)
+            tableName: sub_network_dns_names
+  - changeSet:
+      id: 1725554130753-94
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: tosca_repository_keys_pkey
+                  name: tosca_repository_id
+                  type: UUID
+              - column:
+                  name: keys
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: tosca_repository_keys_pkey
+                  name: keys_key
+                  type: VARCHAR(255)
+            tableName: tosca_repository_keys
+  - changeSet:
+      id: 1725554130753-95
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_blueprint_additional_params_pkey
+                  name: vnf_blueprint_id
+                  type: UUID
+              - column:
+                  name: additional_params
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_blueprint_additional_params_pkey
+                  name: additional_params_key
+                  type: VARCHAR(255)
+            tableName: vnf_blueprint_additional_params
+  - changeSet:
+      id: 1725554130753-96
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_blueprint_cir_connections_pkey
+                  name: vnf_blueprint_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_blueprint_cir_connections_pkey
+                  name: cir_connections_id
+                  type: UUID
+            tableName: vnf_blueprint_cir_connections
+  - changeSet:
+      id: 1725554130753-97
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_blueprint_cism_connections_pkey
+                  name: vnf_blueprint_id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnf_blueprint_cism_connections_pkey
+                  name: cism_connections_id
+                  type: UUID
+            tableName: vnf_blueprint_cism_connections
+  - changeSet:
+      id: 1725554130753-98
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: vnf_ext_cp_configuration_id
+                  type: UUID
+              - column:
+                  name: net_att_def_resource_id
+                  type: VARCHAR(255)
+            tableName: vnf_ext_cp_configuration_net_att_def_resource_id
+  - changeSet:
+      id: 1725554130753-99
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: vnf_info_modifications_id
+                  type: UUID
+              - column:
+                  name: vnfc_info_modifications_delete_ids
+                  type: VARCHAR(255)
+            tableName: vnf_info_modifications_vnfc_info_modifications_delete_ids
+  - changeSet:
+      id: 1725554130753-100
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnfc_info_modifications_entity_pkey
+                  name: id
+                  type: UUID
+            tableName: vnfc_info_modifications_entity
+  - changeSet:
+      id: 1725554130753-101
+      author: olivier (generated)
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnfc_info_modifications_entity_vnfc_configurable_propertie_pkey
+                  name: vnfc_info_modifications_entity_id
+                  type: UUID
+              - column:
+                  name: vnfc_configurable_properties
+                  type: VARCHAR(255)
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: vnfc_info_modifications_entity_vnfc_configurable_propertie_pkey
+                  name: vnfc_configurable_properties_key
+                  type: VARCHAR(255)
+            tableName: vnfc_info_modifications_entity_vnfc_configurable_properties
+  - changeSet:
+      id: 1725554130753-102
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: archive_security_option
+                  type: int2(5)
+            tableName: pnf_descriptor
+  - changeSet:
+      id: 1725554130753-103
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: certificate_content_id
+                  type: varchar(255 BYTE)
+            tableName: vnfc_resource_info_entity
+  - changeSet:
+      id: 1725554130753-104
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: certificate_content_id
+                  type: varchar(255 BYTE)
+            tableName: vnfc_resource_info_vnfc_cp_info_entity
+  - changeSet:
+      id: 1725554130753-105
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: address_pool_name
+                  type: varchar(255 BYTE)
+            tableName: cp_protocol_data_entity
+  - changeSet:
+      id: 1725554130753-106
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: address_pool_name
+                  type: varchar(255 BYTE)
+            tableName: cp_protocol_info
+  - changeSet:
+      id: 1725554130753-107
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: address_pool_name
+                  type: varchar(255 BYTE)
+            tableName: cp_protocol_info_entity
+  - changeSet:
+      id: 1725554130753-108
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: certificate_content_id
+                  type: varchar(255 BYTE)
+            tableName: mcio_info
+  - changeSet:
+      id: 1725554130753-109
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: created_on
+                  type: timestamptz
+            tableName: subscription
+  - changeSet:
+      id: 1725554130753-110
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_network
+                  type: varchar(255 BYTE)
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-111
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_network_id
+                  type: varchar(255 BYTE)
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-112
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: href
+                  type: varchar(255 BYTE)
+            tableName: pm_report
+  - changeSet:
+      id: 1725554130753-113
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: parent_cp_config_id
+                  type: varchar(255 BYTE)
+            tableName: vnf_ext_cp_configuration
+  - changeSet:
+      id: 1725554130753-114
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: scale_to_level
+                  type: varchar(255 BYTE)
+            tableName: ns_scale_info
+  - changeSet:
+      id: 1725554130753-115
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: updated_on
+                  type: timestamptz
+            tableName: subscription
+  - changeSet:
+      id: 1725554130753-116
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: access_info_id
+                  type: uuid
+            tableName: system_connections
+  - changeSet:
+      id: 1725554130753-117
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_network
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-118
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: k8s_version
+                  type: varchar(255 BYTE)
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-119
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: md5
+                  type: varchar(255 BYTE)
+            tableName: ns_archive_artifact_info
+  - changeSet:
+      id: 1725554130753-120
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnfd_id
+                  type: varchar(255 BYTE)
+            tableName: ns_scale_info
+  - changeSet:
+      id: 1725554130753-121
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: certificate_content_id
+                  type: varchar(255 BYTE)
+            tableName: ext_cp_info
+  - changeSet:
+      id: 1725554130753-122
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_cp_info
+                  type: jsonb
+            tableName: instance
+  - changeSet:
+      id: 1725554130753-123
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_network_id
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-124
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: interface_info_id
+                  type: uuid
+            tableName: system_connections
+  - changeSet:
+      id: 1725554130753-125
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: md5
+                  type: varchar(255 BYTE)
+            tableName: vnf_package
+  - changeSet:
+      id: 1725554130753-126
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: nfvi_maintenance_info_id
+                  type: uuid
+            tableName: os_container_deployable_unit
+  - changeSet:
+      id: 1725554130753-127
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: sha256
+                  type: varchar(255 BYTE)
+            tableName: ns_archive_artifact_info
+  - changeSet:
+      id: 1725554130753-128
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: detail
+                  type: varchar(500 BYTE)
+            tableName: grant_response
+  - changeSet:
+      id: 1725554130753-129
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_virtual_link_info
+                  type: jsonb
+            tableName: instance
+  - changeSet:
+      id: 1725554130753-130
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: k8s_version
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-131
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: sha256
+                  type: varchar(255 BYTE)
+            tableName: vnf_package
+  - changeSet:
+      id: 1725554130753-132
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: sha512
+                  type: varchar(255 BYTE)
+            tableName: ns_archive_artifact_info
+  - changeSet:
+      id: 1725554130753-133
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: user_key
+                  type: varchar(5000 BYTE)
+            tableName: k8s_servers
+  - changeSet:
+      id: 1725554130753-134
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ccm_id
+                  type: uuid
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-135
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: instance
+                  type: varchar(255 BYTE)
+            tableName: grant_response
+  - changeSet:
+      id: 1725554130753-136
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: pnfd_ext_invariant_id
+                  type: varchar(255 BYTE)
+            tableName: pnf_descriptor
+  - changeSet:
+      id: 1725554130753-137
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: segmentation_type
+                  type: int2(5)
+            tableName: ip_over_ethernet_address_data_entity
+  - changeSet:
+      id: 1725554130753-138
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: sha512
+                  type: varchar(255 BYTE)
+            tableName: vnf_package
+  - changeSet:
+      id: 1725554130753-139
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: cni_id
+                  type: uuid
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-140
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: status
+                  type: int8
+            tableName: grant_response
+  - changeSet:
+      id: 1725554130753-141
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: value
+                  type: float8
+            tableName: vnf_indicator
+  - changeSet:
+      id: 1725554130753-142
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: app_name
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-143
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: csi_id
+                  type: uuid
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-144
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: title
+                  type: varchar(255 BYTE)
+            tableName: grant_response
+  - changeSet:
+      id: 1725554130753-145
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnf_instance_id
+                  type: varchar(255 BYTE)
+            tableName: vnf_indicator
+  - changeSet:
+      id: 1725554130753-146
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: charm_name
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-147
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: master_id
+                  type: uuid
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-148
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: nsd_ext_invariant_id
+                  type: varchar(255 BYTE)
+            tableName: nsd_package
+  - changeSet:
+      id: 1725554130753-149
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: type
+                  type: varchar(255 BYTE)
+            tableName: grant_response
+  - changeSet:
+      id: 1725554130753-150
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: constraints
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-151
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: worker_id
+                  type: uuid
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-152
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: access_info_id
+                  type: uuid
+            tableName: mon_conn_information
+  - changeSet:
+      id: 1725554130753-153
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: flavor_name
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-154
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: image_id
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-155
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: interface_info_id
+                  type: uuid
+            tableName: mon_conn_information
+  - changeSet:
+      id: 1725554130753-156
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: network_id
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-157
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: pnfd_version
+                  type: varchar(255 BYTE)
+            tableName: pnf_descriptor
+  - changeSet:
+      id: 1725554130753-158
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: virtual_link_resource_info
+                  type: jsonb
+            tableName: instance
+  - changeSet:
+      id: 1725554130753-159
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: os_series
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-160
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: signing_certificate
+                  type: varchar(255 BYTE)
+            tableName: pnf_descriptor
+  - changeSet:
+      id: 1725554130753-161
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: virtual_storage_resource_info
+                  type: jsonb
+            tableName: instance
+  - changeSet:
+      id: 1725554130753-162
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: header_version
+                  type: varchar(255 BYTE)
+            tableName: subscription
+  - changeSet:
+      id: 1725554130753-163
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: nfvi_maintenance_info_id
+                  type: uuid
+            tableName: vnf_compute
+  - changeSet:
+      id: 1725554130753-164
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: region
+                  type: varchar(255 BYTE)
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-165
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnf_monitoring_parameter
+                  type: jsonb
+            tableName: instance
+  - changeSet:
+      id: 1725554130753-166
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnfc_resource_info
+                  type: jsonb
+            tableName: instance
+  - changeSet:
+      id: 1725554130753-167
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_cp_info
+                  type: jsonb
+            tableName: ns_blueprint
+  - changeSet:
+      id: 1725554130753-168
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: verbosity
+                  type: int2(5)
+            tableName: subscription
+  - changeSet:
+      id: 1725554130753-169
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_virtual_link_info
+                  type: jsonb
+            tableName: ns_blueprint
+  - changeSet:
+      id: 1725554130753-170
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: access_info_id
+                  type: uuid
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-171
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: interface_info_id
+                  type: uuid
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-172
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ccm_id
+                  type: uuid
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-173
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: cni_id
+                  type: uuid
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-174
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: csi_id
+                  type: uuid
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-175
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: master_id
+                  type: uuid
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-176
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: worker_id
+                  type: uuid
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-177
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: virtual_link_resource_info
+                  type: jsonb
+            tableName: ns_blueprint
+  - changeSet:
+      id: 1725554130753-178
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_cp_info
+                  type: jsonb
+            tableName: vnf_blueprint
+  - changeSet:
+      id: 1725554130753-179
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: virtual_storage_resource_info
+                  type: jsonb
+            tableName: ns_blueprint
+  - changeSet:
+      id: 1725554130753-180
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: ext_virtual_link_info
+                  type: jsonb
+            tableName: vnf_blueprint
+  - changeSet:
+      id: 1725554130753-181
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnf_monitoring_parameter
+                  type: jsonb
+            tableName: ns_blueprint
+  - changeSet:
+      id: 1725554130753-182
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnfc_resource_info
+                  type: jsonb
+            tableName: ns_blueprint
+  - changeSet:
+      id: 1725554130753-183
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnf_inst_id
+                  type: varchar(255 BYTE)
+            tableName: vnf_task
+  - changeSet:
+      id: 1725554130753-184
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: virtual_link_resource_info
+                  type: jsonb
+            tableName: vnf_blueprint
+  - changeSet:
+      id: 1725554130753-185
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: virtual_storage_resource_info
+                  type: jsonb
+            tableName: vnf_blueprint
+  - changeSet:
+      id: 1725554130753-186
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnf_monitoring_parameter
+                  type: jsonb
+            tableName: vnf_blueprint
+  - changeSet:
+      id: 1725554130753-187
+      author: olivier (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: vnfc_resource_info
+                  type: jsonb
+            tableName: vnf_blueprint
+  - changeSet:
+      id: 1725554130753-188
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ip_over_eth_addr_ip_addr_id
+            baseTableName: ip_over_eth_addr_ip_addr_addresses
+            constraintName: fk2kqbxuldwprykrvkbr4xildgd
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ip_over_eth_addr_ip_addr
+            validate: true
+  - changeSet:
+      id: 1725554130753-189
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_info_modifications_id
+            baseTableName: vnf_info_modifications_vnfc_info_modifications
+            constraintName: fk369wtbcyvu1c4l45rwijwih3j
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_info_modifications
+            validate: true
+  - changeSet:
+      id: 1725554130753-190
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: repositories_id
+            baseTableName: vnf_package_repositories
+            constraintName: fk3op5luf4yftblqt6jvnue8kf3
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: repository
+            validate: true
+  - changeSet:
+      id: 1725554130753-191
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: pools_id
+            baseTableName: sub_network_pools
+            constraintName: fk42hajpkiupjyywuso8o2ur1nm
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ip_pool
+            validate: true
+  - changeSet:
+      id: 1725554130753-192
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnfc_info_modifications_id
+            baseTableName: vnf_info_modifications_vnfc_info_modifications
+            constraintName: fk4aod89cnep2154ip8stfqcbww
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnfc_info_modifications_entity
+            validate: true
+  - changeSet:
+      id: 1725554130753-193
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ns_blueprint_id
+            baseTableName: ns_blueprint_cism_connections
+            constraintName: fk4qp505fhyp0c26mkdd9gugegr
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ns_blueprint
+            validate: true
+  - changeSet:
+      id: 1725554130753-194
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cni_id
+            baseTableName: vim_connection_information
+            constraintName: fk4vmgxm6fvs8bj63d9ighjeh9b
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_option_version
+            validate: true
+  - changeSet:
+      id: 1725554130753-195
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ip_over_eth_addr_ip_addr_id
+            baseTableName: ip_over_eth_addr_ip_addr_fixed_addresses
+            constraintName: fk4wjp4e32ntl1yf7jxhkb5dv3k
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ip_over_eth_addr_ip_addr
+            validate: true
+  - changeSet:
+      id: 1725554130753-196
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_blueprint_id
+            baseTableName: vnf_blueprint_cism_connections
+            constraintName: fk5k3tcqq8ld8tvgpwlyrj6gwek
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_blueprint
+            validate: true
+  - changeSet:
+      id: 1725554130753-197
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: openstackv3interface_info_id
+            baseTableName: openstackv3interface_info_trusted_certificates
+            constraintName: fk5shk3xq655nrbn0arb1he7537
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: openstackv3interface_info
+            validate: true
+  - changeSet:
+      id: 1725554130753-198
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: master_id
+            baseTableName: cnf_server
+            constraintName: fk6yv9ihmvtjfsik2baej1xgf0o
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_machine
+            validate: true
+  - changeSet:
+      id: 1725554130753-199
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cni_id
+            baseTableName: cnf_server
+            constraintName: fk7alx7dkug2vbp3ben9v90r7e1
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_option_version
+            validate: true
+  - changeSet:
+      id: 1725554130753-200
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cism_connection_info_id
+            baseTableName: instance_cism_connection_info
+            constraintName: fk7p9eb1p1xbji27fysvvcm0o1j
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-201
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: artifacts_id
+            baseTableName: pnf_descriptor_artifacts
+            constraintName: fk7uoex1gx1n3m1ucunpyf6m9l4
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: additional_artifact
+            validate: true
+  - changeSet:
+      id: 1725554130753-202
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ns_blueprint_id
+            baseTableName: ns_blueprint_additional_params
+            constraintName: fk838rhxpkgf2lpg71a8na0y261
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ns_blueprint
+            validate: true
+  - changeSet:
+      id: 1725554130753-203
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: paas_assets_id
+            baseTableName: grant_response_paas_assets
+            constraintName: fk8ak2gm4x94d3rpel9n5h3juyw
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: paas_asset
+            validate: true
+  - changeSet:
+      id: 1725554130753-204
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_blueprint_id
+            baseTableName: vnf_blueprint_cir_connections
+            constraintName: fk9bga5490g62yyylsd9d5ii9j4
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_blueprint
+            validate: true
+  - changeSet:
+      id: 1725554130753-205
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: worker_id
+            baseTableName: vim_connection_information
+            constraintName: fk9hfi47egsq0y3k5ox9buod28u
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_machine
+            validate: true
+  - changeSet:
+      id: 1725554130753-206
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: grant_response_id
+            baseTableName: grant_response_storage_assets
+            constraintName: fk9jfqogux9nt9cj8boi0efdgir
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: grant_response
+            validate: true
+  - changeSet:
+      id: 1725554130753-207
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: csi_id
+            baseTableName: vim_connection_information
+            constraintName: fkaib7f0xaeqbencibwo1fn1qun
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_option_version
+            validate: true
+  - changeSet:
+      id: 1725554130753-208
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: worker_id
+            baseTableName: cnf_server
+            constraintName: fkb4q0civfc2kqu8drgno0rjo5k
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_machine
+            validate: true
+  - changeSet:
+      id: 1725554130753-209
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: openstack_keystonev3connection_id
+            baseTableName: openstack_keystonev3connection_extra
+            constraintName: fkbcy4vb3fb2xf958l7do83b6p3
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: openstack_keystonev3connection
+            validate: true
+  - changeSet:
+      id: 1725554130753-210
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnfc_info_modifications_entity_id
+            baseTableName: vnfc_info_modifications_entity_vnfc_configurable_properties
+            constraintName: fkc7ei7fyf1ktbuiu0p4dw49ytc
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnfc_info_modifications_entity
+            validate: true
+  - changeSet:
+      id: 1725554130753-211
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: k8s_tls_connection_id
+            baseTableName: k8s_tls_connection_extra
+            constraintName: fkcbo2hfk2tm7w1cov5dxjxjre1
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: k8s_tls_connection
+            validate: true
+  - changeSet:
+      id: 1725554130753-212
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_blueprint_id
+            baseTableName: vnf_blueprint_additional_params
+            constraintName: fkdc3nf166632p3720ue4h5d3tr
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_blueprint
+            validate: true
+  - changeSet:
+      id: 1725554130753-213
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: grant_information_ext_id
+            baseTableName: grant_information_ext_mcio_constraints
+            constraintName: fkedgceqgyvtyt2ypegou0cefkf
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: grant_information_ext
+            validate: true
+  - changeSet:
+      id: 1725554130753-214
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: credentail_id
+            baseTableName: juju_clouds
+            constraintName: fkeu0hcc7qfaphl9qpm8kxyhbdq
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: juju_credentials
+            validate: true
+  - changeSet:
+      id: 1725554130753-215
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: master_id
+            baseTableName: vim_connection_information
+            constraintName: fkeuik6ybwm6dfp8ufodw21m1w
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_machine
+            validate: true
+  - changeSet:
+      id: 1725554130753-216
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: models_id
+            baseTableName: juju_models
+            constraintName: fkexbp8nwxjavx8ndua79mvfio0
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: juju_metadata
+            validate: true
+  - changeSet:
+      id: 1725554130753-217
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: tosca_repository_id
+            baseTableName: tosca_repository_keys
+            constraintName: fkfdeknkeybhtuv6kpkpwiw316y
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: repository
+            validate: true
+  - changeSet:
+      id: 1725554130753-218
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: sub_network_id
+            baseTableName: sub_network_pools
+            constraintName: fkfdvvviteuobma4expdffwhcke
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: sub_network
+            validate: true
+  - changeSet:
+      id: 1725554130753-219
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: instance_id
+            baseTableName: instance_cism_connection_info
+            constraintName: fkfqakedrvyly9ec7gwwjq0hs88
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: instance
+            validate: true
+  - changeSet:
+      id: 1725554130753-220
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cir_connections_id
+            baseTableName: vnf_blueprint_cir_connections
+            constraintName: fkggo5ebxbgw0cgieyounb4cd28
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-221
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_ext_cp_configuration_id
+            baseTableName: vnf_ext_cp_configuration_net_att_def_resource_id
+            constraintName: fkh1tlph6mo347w4fs17wop2qaa
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_ext_cp_configuration
+            validate: true
+  - changeSet:
+      id: 1725554130753-222
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: storage_assets_id
+            baseTableName: grant_response_storage_assets
+            constraintName: fkh2twjp8euvkarwxs6qo7xaa0x
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: storage_asset
+            validate: true
+  - changeSet:
+      id: 1725554130753-223
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: artifact_id
+            baseTableName: vnf_package_artifact
+            constraintName: fkhf7rbiqv1wbn0br252ctweeft
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: external_artifacts_access_config_artifact
+            validate: true
+  - changeSet:
+      id: 1725554130753-224
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ip_addresses_id
+            baseTableName: ip_over_ethernet_address_info_entity_ip_addresses
+            constraintName: fkib44l1gx3n88vbjjid1l2k3ks
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ip_over_eth_addr_ip_addr
+            validate: true
+  - changeSet:
+      id: 1725554130753-225
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cir_connections_id
+            baseTableName: ns_blueprint_cir_connections
+            constraintName: fkkynfxblnlk8rr6gy9meyp318k
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-226
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: nfvi_maintenance_info_id
+            baseTableName: os_container_deployable_unit
+            constraintName: fklj1vrmlkk67qtcm1owlgv45pg
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: nfvi_maintenance_info
+            validate: true
+  - changeSet:
+      id: 1725554130753-227
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: grant_response_id
+            baseTableName: grant_response_paas_assets
+            constraintName: fkltodsbv1ead79hbscbu32a93f
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: grant_response
+            validate: true
+  - changeSet:
+      id: 1725554130753-228
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ip_addresses_id
+            baseTableName: ip_over_ethernet_address_data_entity_ip_addresses
+            constraintName: fklv1r3xv5tivtmwkebra753h8v
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ip_over_eth_addr_ip_addr
+            validate: true
+  - changeSet:
+      id: 1725554130753-229
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: pnf_descriptor_id
+            baseTableName: pnf_descriptor_user_defined_data
+            constraintName: fkmf6knvtmwia2ym00mni146v7c
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: pnf_descriptor
+            validate: true
+  - changeSet:
+      id: 1725554130753-230
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ns_blueprint_id
+            baseTableName: ns_blueprint_cir_connections
+            constraintName: fkmnr2rpukmstq5sig5jsmscdyj
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: ns_blueprint
+            validate: true
+  - changeSet:
+      id: 1725554130753-231
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: nfvi_maintenance_info_id
+            baseTableName: vnf_compute
+            constraintName: fkncicurdtba63m0wyqc6i33eav
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: nfvi_maintenance_info
+            validate: true
+  - changeSet:
+      id: 1725554130753-232
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: region_id
+            baseTableName: juju_regions
+            constraintName: fknvbcbsghd7wd53g11cik1nlg1
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: juju_clouds
+            validate: true
+  - changeSet:
+      id: 1725554130753-233
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cism_connections_id
+            baseTableName: vnf_blueprint_cism_connections
+            constraintName: fknw94i1mm5bulqaywfhcwvxkk3
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-234
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: mciop_repository_info_id
+            baseTableName: instance_mciop_repository_info
+            constraintName: fknxv2oyuy8glik1g9w9et9i4tt
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-235
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: software_image_id
+            baseTableName: software_image_user_metadata
+            constraintName: fkoh9nb2w6ghwud0554f6ifbtn
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: software_image
+            validate: true
+  - changeSet:
+      id: 1725554130753-236
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cir_connection_info_id
+            baseTableName: instance_cir_connection_info
+            constraintName: fkoir81gxf86pqbeoeb0ucy0kr1
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-237
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_package_id
+            baseTableName: vnf_package_artifact
+            constraintName: fkosm1lo1r7kmryvmbygx90tkk9
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_package
+            validate: true
+  - changeSet:
+      id: 1725554130753-238
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: paas_service_handle_id
+            baseTableName: paas_asset
+            constraintName: fkpgf36293ijyl2pctthui78qqr
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-239
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ccm_id
+            baseTableName: cnf_server
+            constraintName: fkq9pdxaj32l35il05jo6wuvx02
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_option_version
+            validate: true
+  - changeSet:
+      id: 1725554130753-240
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: sub_network_id
+            baseTableName: sub_network_dns_names
+            constraintName: fkqhs0ghax4luf5n4q8maqsxyvw
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: sub_network
+            validate: true
+  - changeSet:
+      id: 1725554130753-241
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cism_connections_id
+            baseTableName: grant_response_cism_connections
+            constraintName: fkqvvcmiekwc28rt8yxdbafl17s
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-242
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: pnf_descriptor_id
+            baseTableName: pnf_descriptor_artifacts
+            constraintName: fkqy3cst227ql1lrh473p1k92bf
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: pnf_descriptor
+            validate: true
+  - changeSet:
+      id: 1725554130753-243
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: grant_information_ext_id
+            baseTableName: grant_information_ext_resource_template_id
+            constraintName: fkr0citon1xcyb3ix1s0t5wvyl4
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: grant_information_ext
+            validate: true
+  - changeSet:
+      id: 1725554130753-244
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_package_id
+            baseTableName: vnf_package_repositories
+            constraintName: fkshr7jfxvxirksc66lby8v4e9o
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_package
+            validate: true
+  - changeSet:
+      id: 1725554130753-245
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: grant_response_id
+            baseTableName: grant_response_cism_connections
+            constraintName: fkssq8u5idam1ci0iup1nsacktq
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: grant_response
+            validate: true
+  - changeSet:
+      id: 1725554130753-246
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: vnf_info_modifications_id
+            baseTableName: vnf_info_modifications_vnfc_info_modifications_delete_ids
+            constraintName: fksxaa3ffaay3itlefos6lso8vw
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vnf_info_modifications
+            validate: true
+  - changeSet:
+      id: 1725554130753-247
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: csi_id
+            baseTableName: cnf_server
+            constraintName: fkt3rdp0q03s9bew2v0oiy3psjb
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_option_version
+            validate: true
+  - changeSet:
+      id: 1725554130753-248
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: cism_connections_id
+            baseTableName: ns_blueprint_cism_connections
+            constraintName: fkt5djbu4ta4ovhxu5a9rhsmvjm
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-249
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: ccm_id
+            baseTableName: vim_connection_information
+            constraintName: fkted4jrbmpwpg78agxfvahhnb
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: cluster_option_version
+            validate: true
+  - changeSet:
+      id: 1725554130753-250
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: oauth2access_id
+            baseTableName: oauth2access_scopes
+            constraintName: fkth4vt695qnpjqni11i99h9uif
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: oauth2access
+            validate: true
+  - changeSet:
+      id: 1725554130753-251
+      author: olivier (generated)
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: metadata_id
+            baseTableName: juju_clouds
+            constraintName: fktkujm0buexrecmw7c0cmd3ab9
+            deferrable: false
+            initiallyDeferred: false
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+            referencedColumnNames: id
+            referencedTableName: juju_metadata
+            validate: true
+  - changeSet:
+      id: 1725554130753-263
+      author: olivier (generated)
+      changes:
+        - dropUniqueConstraint:
+            constraintName: uk_3mh5rexg6mdt8sc1ld8axllpl
+            tableName: ns_task
+  - changeSet:
+      id: 1725554130753-264
+      author: olivier (generated)
+      changes:
+        - dropUniqueConstraint:
+            constraintName: uk_5nmqd7kq25s3vur35657tw5es
+            tableName: ext_managed_virtual_link_data_entity
+  - changeSet:
+      id: 1725554130753-265
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: ip_over_ethernet_address_data_ip_addresses_entity
+  - changeSet:
+      id: 1725554130753-266
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: ip_over_ethernet_address_data_ip_addresses_entity_addresses
+  - changeSet:
+      id: 1725554130753-266-01
+      author: olivier
+      changes:
+        - customChange:
+            class: com.ubiqube.etsi.mano.liquibase.common.VimConnMigration
+  - changeSet:
+      id: 1725554130753-267
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: mon_conn_information_access_info
+  - changeSet:
+      id: 1725554130753-268
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: mon_conn_information_interface_info
+  - changeSet:
+      id: 1725554130753-269
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: system_connections_access_info
+  - changeSet:
+      id: 1725554130753-270
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: system_connections_interface_info
+  - changeSet:
+      id: 1725554130753-271
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: vim_connection_information_access_info
+  - changeSet:
+      id: 1725554130753-272
+      author: olivier (generated)
+      changes:
+        - dropTable:
+            tableName: vim_connection_information_interface_info
+  - changeSet:
+      id: 1725554130753-273
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: cluster_template
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-274
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: cluster_template
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-275
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: initial_br_leaf
+            tableName: vnf_vl
+  - changeSet:
+      id: 1725554130753-276
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: initial_br_root
+            tableName: vnf_vl
+  - changeSet:
+      id: 1725554130753-277
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: master_flavor_id
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-278
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: master_flavor_id
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-279
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: network_driver
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-280
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: network_driver
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-281
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: pnfdersion
+            tableName: pnf_descriptor
+  - changeSet:
+      id: 1725554130753-282
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: resource_template_id
+            tableName: grant_information_ext
+  - changeSet:
+      id: 1725554130753-283
+      author: olivier (generated)
+      changes:
+        - dropColumn:
+            columnName: user_defined_data
+            tableName: pnf_descriptor
+  - changeSet:
+      id: 1725554130753-1
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: internal_virtual_link
+            tableName: vnf_ext_cp
+            validate: true
+  - changeSet:
+      id: 1725554130753-2
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: name
+            tableName: software_image
+            validate: true
+  - changeSet:
+      id: 1725554130753-3
+      author: olivier (generated)
+      changes:
+        - dropNotNullConstraint:
+            columnDataType: int
+            columnName: scale_level
+            tableName: scale_info
+  - changeSet:
+      id: 1725554130753-4
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: tosca_name
+            tableName: security_group
+            validate: true
+  - changeSet:
+      id: 1725554130753-5
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: tosca_name
+            tableName: vnf_compute
+            validate: true
+  - changeSet:
+      id: 1725554130753-6
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: tosca_name
+            tableName: vnf_ext_cp
+            validate: true
+  - changeSet:
+      id: 1725554130753-7
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: tosca_name
+            tableName: vnf_vl
+            validate: true
+  - changeSet:
+      id: 1725554130753-8-0
+      author: olivier
+      changes:
+        - dropUniqueConstraint:
+            tableName: api_version
+            constraintName: api_version_type_check
+  - changeSet:
+      id: 1725554130753-8
+      author: olivier (generated)
+      changes:
+        - modifyDataType:
+            columnName: type
+            newDataType: varchar(255)
+            tableName: api_version
+  - changeSet:
+      id: 1725554130753-9
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: vim_id
+            tableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-10
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: vim_type
+            tableName: vim_connection_information
+            validate: true
+  - changeSet:
+      id: 1725554130753-11
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: uuid
+            columnName: virtual_cpu_id
+            tableName: vnf_compute
+            validate: true
+  - changeSet:
+      id: 1725554130753-12
+      author: olivier (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: uuid
+            columnName: virtual_memory_id
+            tableName: vnf_compute
+            validate: true
+
+  - changeSet:
+      id: 1725554130753-26
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: master_id
+            constraintName: uk2jw3027ca6avyyjddyq28x3uo
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-27
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: ccm_id
+            constraintName: uk2s06oqerbk8x2b274wu3novj0
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-28
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: worker_id
+            constraintName: uk6hpqwsglcjgnvp0u0fqh466r8
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-29
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: csi_id
+            constraintName: ukc81dv8ee3xcqhb4guowleh7wo
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-30
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: cni_id
+            constraintName: ukq5de3us3yboh43mtjf25tjbv4
+            tableName: cnf_server
+  - changeSet:
+      id: 1725554130753-31
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: access_info_id
+            constraintName: uk115wylddwqvd4uxty7rf8ap2y
+            tableName: mon_conn_information
+  - changeSet:
+      id: 1725554130753-32
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: interface_info_id
+            constraintName: ukth9wxn76935tio1dd30bqj0am
+            tableName: mon_conn_information
+  - changeSet:
+      id: 1725554130753-33
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: worker_id
+            constraintName: uk3b9l3yig26ifiqsbfukp9l4ij
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-34
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: interface_info_id
+            constraintName: uk3ykgdlw8x69bnecd6j44abyl1
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-35
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: access_info_id
+            constraintName: ukcnj4deej43liwko7odj9um58r
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-36
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: cni_id
+            constraintName: ukds22edmcnoufcnv1n8t1jnvu7
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-37
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: ccm_id
+            constraintName: ukh3n3fkwpnmipmrta2rkgg4w9v
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-38
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: master_id
+            constraintName: ukp1mx3ah1eem30p42dsrs2ybye
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-39
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: csi_id
+            constraintName: ukrbw6giyp2qkmu80wym0ls3566
+            tableName: vim_connection_information
+  - changeSet:
+      id: 1725554130753-40
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: access_info_id
+            constraintName: uk129ae0ws8xg8pcaqfo7vmvj2o
+            tableName: k8s_tls_connection
+  - changeSet:
+      id: 1725554130753-41
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: interface_info_id
+            constraintName: ukt9recqr982vqeq2ttw5ejml8n
+            tableName: k8s_tls_connection
+  - changeSet:
+      id: 1725554130753-42
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: interface_info_id
+            constraintName: uk2w8id5159dnl266efgwx706u3
+            tableName: system_connections
+  - changeSet:
+      id: 1725554130753-43
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: access_info_id
+            constraintName: uke9jwntpqcq9gb6gkl0u4ub2uh
+            tableName: system_connections
+  - changeSet:
+      id: 1725554130753-44
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: access_info_id
+            constraintName: uk3u3h6r8ev16oqfbaekvnri00c
+            tableName: openstack_keystonev3connection
+  - changeSet:
+      id: 1725554130753-45
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: interface_info_id
+            constraintName: ukm28hb2eypuvriwj5byd9j2wc8
+            tableName: openstack_keystonev3connection
+  - changeSet:
+      id: 1725554130753-46
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: nfvi_maintenance_info_id
+            constraintName: uk49ggjdblv48k6yfmsho7p38qw
+            tableName: os_container_deployable_unit
+  - changeSet:
+      id: 1725554130753-47
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: vnfc_info_modifications_id
+            constraintName: uk5a1tlcyjog8uh8mo3n8338pi7
+            tableName: vnf_info_modifications_vnfc_info_modifications
+  - changeSet:
+      id: 1725554130753-48
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: paas_assets_id
+            constraintName: uk6flqcnmslk7lqh77srtcs24nj
+            tableName: grant_response_paas_assets
+  - changeSet:
+      id: 1725554130753-49
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: repositories_id
+            constraintName: uk6ntjn2q17dhtkte2xxpiyqkr9
+            tableName: vnf_package_repositories
+  - changeSet:
+      id: 1725554130753-50
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: nfvi_maintenance_info_id
+            constraintName: uk7amy3xugomi6onvjv9o7689wc
+            tableName: vnf_compute
+  - changeSet:
+      id: 1725554130753-51
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: paas_service_handle_id
+            constraintName: ukaqxwft9dw8suc7e0ac39ns2rt
+            tableName: paas_asset
+  - changeSet:
+      id: 1725554130753-52
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: artifact_id
+            constraintName: ukcbnt3507qqq6f8t2qvtntqmyj
+            tableName: vnf_package_artifact
+  - changeSet:
+      id: 1725554130753-53
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: artifacts_id
+            constraintName: ukgw3foria4wclmghgcjj8hpan4
+            tableName: pnf_descriptor_artifacts
+  - changeSet:
+      id: 1725554130753-54
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: storage_assets_id
+            constraintName: uki48skmmdh489a3y151wbnbppp
+            tableName: grant_response_storage_assets
+  - changeSet:
+      id: 1725554130753-55
+      author: olivier (generated)
+      changes:
+        - addUniqueConstraint:
+            columnNames: pools_id
+            constraintName: uks18wls6g1n2l95woq0u1rgmm9
+            tableName: sub_network_pools
