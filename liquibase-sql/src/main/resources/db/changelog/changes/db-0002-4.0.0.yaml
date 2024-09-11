@@ -794,7 +794,7 @@ databaseChangeLog:
                   type: UUID
               - column:
                   name: constraints
-                  type: VARCHAR[]
+                  type: VARCHAR(255)
               - column:
                   name: image_id
                   type: VARCHAR(255)
@@ -1822,7 +1822,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: ext_cp_info
-                  type: jsonb
+                  type: json
             tableName: instance
   - changeSet:
       id: 1725554130753-123
@@ -1892,7 +1892,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: ext_virtual_link_info
-                  type: jsonb
+                  type: json
             tableName: instance
   - changeSet:
       id: 1725554130753-130
@@ -2182,7 +2182,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: virtual_link_resource_info
-                  type: jsonb
+                  type: json
             tableName: instance
   - changeSet:
       id: 1725554130753-159
@@ -2212,7 +2212,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: virtual_storage_resource_info
-                  type: jsonb
+                  type: json
             tableName: instance
   - changeSet:
       id: 1725554130753-162
@@ -2252,7 +2252,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: vnf_monitoring_parameter
-                  type: jsonb
+                  type: json
             tableName: instance
   - changeSet:
       id: 1725554130753-166
@@ -2262,7 +2262,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: vnfc_resource_info
-                  type: jsonb
+                  type: json
             tableName: instance
   - changeSet:
       id: 1725554130753-167
@@ -2272,7 +2272,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: ext_cp_info
-                  type: jsonb
+                  type: json
             tableName: ns_blueprint
   - changeSet:
       id: 1725554130753-168
@@ -2292,7 +2292,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: ext_virtual_link_info
-                  type: jsonb
+                  type: json
             tableName: ns_blueprint
   - changeSet:
       id: 1725554130753-170
@@ -2372,7 +2372,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: virtual_link_resource_info
-                  type: jsonb
+                  type: json
             tableName: ns_blueprint
   - changeSet:
       id: 1725554130753-178
@@ -2382,7 +2382,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: ext_cp_info
-                  type: jsonb
+                  type: json
             tableName: vnf_blueprint
   - changeSet:
       id: 1725554130753-179
@@ -2392,7 +2392,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: virtual_storage_resource_info
-                  type: jsonb
+                  type: json
             tableName: ns_blueprint
   - changeSet:
       id: 1725554130753-180
@@ -2402,7 +2402,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: ext_virtual_link_info
-                  type: jsonb
+                  type: json
             tableName: vnf_blueprint
   - changeSet:
       id: 1725554130753-181
@@ -2412,7 +2412,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: vnf_monitoring_parameter
-                  type: jsonb
+                  type: json
             tableName: ns_blueprint
   - changeSet:
       id: 1725554130753-182
@@ -2422,7 +2422,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: vnfc_resource_info
-                  type: jsonb
+                  type: json
             tableName: ns_blueprint
   - changeSet:
       id: 1725554130753-183
@@ -2442,7 +2442,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: virtual_link_resource_info
-                  type: jsonb
+                  type: json
             tableName: vnf_blueprint
   - changeSet:
       id: 1725554130753-185
@@ -2452,7 +2452,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: virtual_storage_resource_info
-                  type: jsonb
+                  type: json
             tableName: vnf_blueprint
   - changeSet:
       id: 1725554130753-186
@@ -2462,7 +2462,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: vnf_monitoring_parameter
-                  type: jsonb
+                  type: json
             tableName: vnf_blueprint
   - changeSet:
       id: 1725554130753-187
@@ -2472,7 +2472,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: vnfc_resource_info
-                  type: jsonb
+                  type: json
             tableName: vnf_blueprint
   - changeSet:
       id: 1725554130753-188
@@ -3437,6 +3437,7 @@ databaseChangeLog:
   - changeSet:
       id: 1725554130753-263
       author: olivier (generated)
+      dbms: postgresql
       changes:
         - dropUniqueConstraint:
             constraintName: uk_3mh5rexg6mdt8sc1ld8axllpl
@@ -3444,6 +3445,7 @@ databaseChangeLog:
   - changeSet:
       id: 1725554130753-264
       author: olivier (generated)
+      dbms: postgresql
       changes:
         - dropUniqueConstraint:
             constraintName: uk_5nmqd7kq25s3vur35657tw5es
@@ -3644,6 +3646,7 @@ databaseChangeLog:
   - changeSet:
       id: 1725554130753-8-0
       author: olivier
+      dbms: prostgresql
       changes:
         - dropUniqueConstraint:
             tableName: api_version
