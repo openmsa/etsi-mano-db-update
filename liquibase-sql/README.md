@@ -9,7 +9,7 @@
 liquibase --classpath=target/classes/ update-sql --changelog-file src/main/resources/db/changelog/db.changelog-master.yaml
 ```
 
-## 💦 Dry run
+## 💦 Tag existing database
 
 ```bash
 liquibase --classpath=target/classes/ changelog-sync-to-tag --tag=3.2.2 --changelog-file src/main/resources/db/changelog/db.changelog-master.yaml
