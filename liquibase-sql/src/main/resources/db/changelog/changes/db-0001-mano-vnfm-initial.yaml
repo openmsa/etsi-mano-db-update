@@ -9682,7 +9682,7 @@ databaseChangeLog:
       author: olivier (generated)
       changes:
         - createSequence:
-            cacheSize: 1
+            #cacheSize: 1
             cycle: false
             #dataType: int8
             incrementBy: 50
@@ -9695,7 +9695,7 @@ databaseChangeLog:
       author: olivier (generated)
       changes:
         - createSequence:
-            cacheSize: 1
+            #cacheSize: 1
             cycle: false
             #dataType: int8
             incrementBy: 50
@@ -9708,7 +9708,7 @@ databaseChangeLog:
       author: olivier (generated)
       changes:
         - createSequence:
-            cacheSize: 1
+            #cacheSize: 1
             cycle: false
             #dataType: bigint
             incrementBy: 50
@@ -9721,7 +9721,7 @@ databaseChangeLog:
       author: olivier (generated)
       changes:
         - createSequence:
-            cacheSize: 1
+            #cacheSize: 1
             cycle: false
             #dataType: bigint
             incrementBy: 50
@@ -9734,7 +9734,7 @@ databaseChangeLog:
       author: olivier (generated)
       changes:
         - createSequence:
-            cacheSize: 1
+            #cacheSize: 1
             cycle: false
             #dataType: bigint
             incrementBy: 50
@@ -9747,7 +9747,7 @@ databaseChangeLog:
       author: olivier (generated)
       changes:
         - createSequence:
-            cacheSize: 1
+            #cacheSize: 1
             cycle: false
             #dataType: bigint
             incrementBy: 50
