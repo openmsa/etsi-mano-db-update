@@ -145,4 +145,23 @@ databaseChangeLog:
         columnName: artifact_classification
         newDataType: varchar(255)
         tableName: additional_artifact
-
+- changeSet:
+    id: 1734165038-1
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: token
+            type: varchar(255)
+        tableName: capi_server
+- changeSet:
+    id: 1734165038-2
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: token
+            type: varchar(255)
+        tableName: k8s_servers
