@@ -2420,7 +2420,7 @@ databaseChangeLog:
                   type: VARCHAR(255)
               - column:
                   name: o2auth_tls_cert
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   name: o2ignore_ssl
                   type: BOOLEAN
@@ -2435,7 +2435,7 @@ databaseChangeLog:
                   type: VARCHAR(255)
               - column:
                   name: auth_tls_cert
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   constraints:
                     nullable: false
@@ -2641,7 +2641,7 @@ databaseChangeLog:
                   type: VARCHAR(255)
               - column:
                   name: o2auth_tls_cert
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   name: o2ignore_ssl
                   type: BOOLEAN
@@ -2656,13 +2656,13 @@ databaseChangeLog:
                   type: VARCHAR(255)
               - column:
                   name: auth_tls_cert
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   name: callback_uri
                   type: VARCHAR(255)
               - column:
                   name: node_filter
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   constraints:
                     nullable: false

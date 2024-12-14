@@ -455,13 +455,13 @@ databaseChangeLog:
                   type: UUID
               - column:
                   name: certificate_authority_data
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   name: client_certificate_data
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   name: client_key_data
-                  type: VARCHAR(5000)
+                  type: TEXT(5000)
               - column:
                   name: name
                   type: VARCHAR(255)
