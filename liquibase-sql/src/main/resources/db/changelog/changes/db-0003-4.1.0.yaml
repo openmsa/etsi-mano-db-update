@@ -1,3 +1,4 @@
+# vi: set tabstop=4 shiftwidth=4 expandtab:
 databaseChangeLog:
 - changeSet:
     id: 1726071068217-12
@@ -164,4 +165,20 @@ databaseChangeLog:
         - column:
             name: token
             type: varchar(255)
+        tableName: k8s_servers
+- changeSet:
+    id: 1737803571-1
+    author: olivier
+    changes:
+    - modifyDataType:
+        columnName: token
+        newDataType: varchar(2048)
+        tableName: capi_server
+- changeSet:
+    id: 1737803571-2
+    author: olivier
+    changes:
+    - modifyDataType:
+        columnName: token
+        newDataType: varchar(2048)
         tableName: k8s_servers
