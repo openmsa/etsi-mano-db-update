@@ -182,3 +182,13 @@ databaseChangeLog:
         columnName: token
         newDataType: varchar(2048)
         tableName: k8s_servers
+- changeSet:
+    id: 1737803571-3
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: child_of
+            type: varchar(255)
+        tableName: vim_connection_information
