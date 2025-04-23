@@ -192,3 +192,72 @@ databaseChangeLog:
             name: child_of
             type: varchar(255)
         tableName: vim_connection_information
+
+- changeSet:
+    id: 1745404963-1
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: state
+            type: varchar(255)
+        - column:
+            name: tosca_id
+            type: varchar(255)
+        tableName: mc_iops
+- changeSet:
+    id: 1745404963-2
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: state
+            type: varchar(255)
+        - column:
+            name: tosca_id
+            type: varchar(255)
+        tableName: os_container_deployable_unit
+    - renameColumn:
+        oldColumnName: name
+        newColumnName: tosca_name
+        columnDataType: varchar(255)
+        tableName: os_container_deployable_unit
+- changeSet:
+    id: 1745404963-3
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: state
+            type: varchar(255)
+        - column:
+            name: tosca_id
+            type: varchar(255)
+        tableName: os_container
+    - renameColumn:
+        oldColumnName: name
+        newColumnName: tosca_name
+        columnDataType: varchar(255)
+        tableName: os_container
+- changeSet:
+    id: 1745404963-4
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: state
+            type: varchar(255)
+        - column:
+            name: tosca_id
+            type: varchar(255)
+        tableName: monitoring_params
+    - renameColumn:
+        oldColumnName: name
+        newColumnName: tosca_name
+        columnDataType: varchar(255)
+        tableName: monitoring_params
+
