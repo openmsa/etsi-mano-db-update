@@ -260,4 +260,34 @@ databaseChangeLog:
         newColumnName: tosca_name
         columnDataType: varchar(255)
         tableName: monitoring_params
-
+- changeSet:
+    id: 1746776458-1
+    author: olivier
+    changes:
+    - createTable:
+        tableName: compute_task_tags
+        columns:
+        - column:
+            name: compute_task_id
+            type: UUID
+            constraints:
+              nullable: false
+        - column:
+            name: tags_key
+            type: VARCHAR(255)
+            constraints:
+              nullable: false
+        - column:
+            name: tags
+            type: VARCHAR(255)
+            constraints:
+              nullable: false
+        primaryKey:
+          columnNames: compute_task_id, tags_key
+    - addForeignKeyConstraint:
+        baseColumnNames: compute_task_id
+        baseTableName: compute_task_tags
+        constraintName: fk6yruq6p6pdxlorxtgkhfbda8f
+        referencedColumnNames: id
+        referencedTableName: vnf_task
+        onDelete: CASCADE
