@@ -291,3 +291,46 @@ databaseChangeLog:
         referencedColumnNames: id
         referencedTableName: vnf_task
         onDelete: CASCADE
+- changeSet:
+    id: 1747996473-1
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: state
+            type: varchar(255)
+        - column:
+            name: tosca_id
+            type: varchar(255)
+        - column:
+            name: tosca_name
+            type: varchar(255)
+        tableName: ip_pool
+- changeSet:
+    id: 1747996473-2
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: state
+            type: varchar(255)
+        - column:
+            name: tosca_id
+            type: varchar(255)
+        - column:
+            name: tosca_name
+            type: varchar(255)
+        tableName: vl_protocol_data
+- changeSet:
+    id: 1748866367-1
+    author: olivier
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: qos_policy_id
+            type: varchar(255)
+        tableName: vnf_task
+
